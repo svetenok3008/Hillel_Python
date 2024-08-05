@@ -1,3 +1,8 @@
+import string
+
+not_allowed_symbols = string.punctuation + ' '
+not_allowed_symbols_list = [i for i in not_allowed_symbols if i != "_"]
+
 user_variable = input('Input your variable: ')
 reserved_list = [
     "False",
@@ -33,8 +38,7 @@ reserved_list = [
     "try",
     "while",
     "yield"]
-not_allowed_symbols = r''' !"#$%&'()*+,-./:;<=>?@[\]^`{|}~'''
-not_allowed_symbols_list = [i for i in not_allowed_symbols]
+
 count_ = user_variable.count('_')
 
 if user_variable in reserved_list:
@@ -43,7 +47,7 @@ if user_variable in reserved_list:
 elif user_variable[0].isdigit():
     result = False
     print('You variable starts with number. This is wrong.')
-elif count_ > 1:
+elif len(user_variable) == count_:
     result = False
     print("This is wrong name for variable: more then one \'_\' used. Please rename.")
 elif any(i in not_allowed_symbols_list for i in user_variable):
