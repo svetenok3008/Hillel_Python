@@ -1,10 +1,9 @@
-punctuation_symbols = r'''!"#$%&'()*+,-./:;<=>?@[\]_^`{|}~'''
+punctuation_symbols = r''' !"#$%&'()*+,-./:;<=>?@[\]_^`{|}~'''
 punctuation_symbols_list = [i for i in punctuation_symbols]
 
 user_variable = input('Input your sentence: ')
-
-hashtag = ''.join([i for i in user_variable if i not in punctuation_symbols_list]).title()
-hashtag = "#" + ''.join([i for i in hashtag if i != " "])
+user_variable = user_variable.title()
+hashtag = "#" + ''.join([i for i in user_variable if i not in punctuation_symbols_list])
 
 if len(hashtag) > 140:
     hashtag = hashtag[0:140]
