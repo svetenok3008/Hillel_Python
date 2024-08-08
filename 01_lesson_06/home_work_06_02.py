@@ -12,25 +12,28 @@ days = str(hours_tpl[0])
 print("First method:")
 
 days_dict = {
-    '1':'день',
-    '2':'дні',
-    '3':'дні',
-    '4':'дні',
-    '5':'днів',
-    '6':'днів',
-    '7':'днів',
-    '8':'днів',
-    '9':'днів',
-    '0':'днів'
+    '1': 'день',
+    '2': 'дні',
+    '3': 'дні',
+    '4': 'дні',
+    '5': 'днів',
+    '6': 'днів',
+    '7': 'днів',
+    '8': 'днів',
+    '9': 'днів',
+    '0': 'днів'
 }
-print(days, days_dict[days[-1]] +",", hours + ":" + minutes + ":" + seconds)
+print(days, days_dict[days[-1]] + ",", hours + ":" + minutes + ":" + seconds)
+
+print()
 
 print("Second method:")
 if days[-1] == '1':
     word_days = 'день'
-elif days[-1] in ('2','3','4'):
+elif days[-1] in ('2', '3', '4'):
     word_days = 'дні'
-elif days[-1] in ('5','6','7','8','9','0'):
+elif days[-1] in ('5', '6', '7', '8', '9', '0'):
     word_days = 'днів'
 
-print(days, word_days +",", hours + ":" + minutes + ":" + seconds)
+
+print(days, word_days + ",", hours + ":" + minutes + ":" + seconds)
