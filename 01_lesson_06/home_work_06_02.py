@@ -9,7 +9,9 @@ minutes = str(minutes_tpl[1]).zfill(2)
 hours = str(hours_tpl[1]).zfill(2)
 days = str(hours_tpl[0])
 
-if days[-1] in ('5', '6', '7', '8', '9', '0') or days[0] == '1':
+
+
+if days[-1] in ('5', '6', '7', '8', '9', '0') or (days[0] == '1' and len(days) > 1):
     word_days = 'днів'
 elif days[-1] == '1':
     word_days = 'день'
