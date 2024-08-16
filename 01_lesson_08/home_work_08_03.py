@@ -1,7 +1,8 @@
 def find_unique_value(some_list):
-    for i in range(len(some_list) + 1):
-        if some_list.count(some_list[i]) == 1:
-            item = some_list[i]
+    item = None
+    for i in some_list:
+        if some_list.count(i) == 1:
+            item = i
             break
     return item
 
