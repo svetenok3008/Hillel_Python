@@ -1,11 +1,12 @@
+from inspect import isgenerator
+
+
 def generate_cube_numbers(end):
     i = 2
     while i ** 3 <= end:
         yield i ** 3
         i += 1
 
-
-from inspect import isgenerator
 
 gen = generate_cube_numbers(1)
 assert isgenerator(gen) == True, 'Test0'
