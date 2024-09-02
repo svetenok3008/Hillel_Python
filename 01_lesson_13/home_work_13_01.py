@@ -33,14 +33,14 @@ class Group:
         self.group.add(student)
 
     def delete_student(self, last_name):
-        for student in self.group:
-            if student.last_name == last_name:
-                self.group.remove(student)
-                return student
-        return 'No, error!'
+        student = self.find_student(last_name)
+        if student is not None:
+            self.group.remove(student)
+        else:
+            return 'No, error!'
 
     def find_student(self, last_name):
-        for student in gr.group:
+        for student in self.group:
             if student.last_name == last_name:
                 return student
         return None
@@ -48,6 +48,7 @@ class Group:
     def __str__(self):
         all_students = ';\n'.join([str(student) for student in gr.group])
         return f'Number:{self.number}\n{all_students} '
+
 
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
 st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')

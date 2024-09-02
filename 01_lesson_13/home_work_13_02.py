@@ -17,16 +17,12 @@ class Counter:
     def step_up(self):
         if self.current + 1 > self.max_value:
             raise ValueError('Досягнут максимум!')
-        else:
-            self.current += 1
-        return True
+        self.current += 1
 
     def step_down(self):
         if self.current - 1 < self.min_value:
             raise ValueError('Досягнут мінімум!')
-        else:
-            self.current -= 1
-        return True
+        self.current -= 1
 
     def get_current(self):
         return self.current
