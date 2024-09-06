@@ -52,7 +52,7 @@ class Group:
         return None
 
     def __str__(self):
-        all_students = ';\n'.join([str(student) for student in gr.group])
+        all_students = ';\n'.join([str(student) for student in self.group])
         return f'Number:{self.number}\n{all_students} '
 
 
